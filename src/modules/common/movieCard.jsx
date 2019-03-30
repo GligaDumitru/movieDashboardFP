@@ -27,13 +27,11 @@ function MediaCard(props) {
           className={classes.media}
           image={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
           title="Contemplative Reptile"
+          style={{ height: "400px" }}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {props && element.title}
-          </Typography>
-          <Typography component="p">
-            {element.overview.substr(0, 200) + "...."}
           </Typography>
         </CardContent>
       </CardActionArea>

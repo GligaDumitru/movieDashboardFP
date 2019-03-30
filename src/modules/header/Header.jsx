@@ -14,6 +14,7 @@ import { withRouter } from "react-router-dom";
 import { setFilter, toggleMenu } from "../../actions/headerActions";
 import { getMovies } from "../../actions/apiActions";
 import SwipeableTemporaryDrawer from "../common/sideMenu";
+import SimpleSelect from "../common/editItemsNumber";
 import {
   createMovieUrl,
   getTopMovies,
@@ -82,6 +83,7 @@ const styles = theme => ({
 });
 
 class Header extends Component {
+  
   componentDidMount() {
     let url = getTopMovies();
     this.props.getMovies(url);
@@ -116,6 +118,13 @@ class Header extends Component {
             >
               Movie Dashboard
             </Typography>
+            {/* <div
+              className="selectNumberOfElement"
+              style={{ background: "#fff", margin: "0 20px" }}
+            >
+              <SimpleSelect />
+            </div> */}
+
             <div className={classes.grow} />
             <div className={classes.search}>
               <div className={classes.searchIcon}>

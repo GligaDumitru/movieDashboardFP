@@ -1,4 +1,9 @@
-import { SET_FILTER, SHOW_MENU, GET_MOVIES } from "../actions/actionsType";
+import {
+  SET_FILTER,
+  SHOW_MENU,
+  GET_MOVIES,
+  CHANGE_PAGE
+} from "../actions/actionsType";
 
 const initialState = {
   text: "",
@@ -25,6 +30,12 @@ const mainReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         ...payload
+      };
+    }
+    case CHANGE_PAGE: {
+      return {
+        ...state,
+        page: payload.page
       };
     }
     default:
